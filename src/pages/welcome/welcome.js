@@ -2,7 +2,7 @@ import React from "react"
 
 const Welcome = () => {
   return (
-    <div className="grid md:grid-cols-2 sm:grid-rows-2 xs:grid-col-1 gap-2 ">
+    <div className="grid md:grid-cols-2  md:grid-rows-1 sm:grid-rows-2 xs:grid-col-1 gap-2 ">
       <div className="pl-2  ">
         {" "}
         <h1 className="font-roboto text-48	pl-4 py-5">
