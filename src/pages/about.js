@@ -1,9 +1,10 @@
 import React from "react"
 import Layout from "../Components/Layout"
-export default function Home() {
+
+export default function about() {
   return (
     <Layout>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <div>lorem</div>
     </Layout>
   )
 }
