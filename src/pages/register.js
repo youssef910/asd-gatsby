@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../Components/Layout"
 
-export default function about() {
+export default function register() {
   return (
     <Layout>
-      <div>About</div>
+      <div>register</div>
     </Layout>
   )
 }
