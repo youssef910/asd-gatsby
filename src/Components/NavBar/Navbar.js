@@ -42,7 +42,7 @@ const NavBar = () => {
           </div>
           <div className="md:hidden flex items-center">
             <button onClick={handleClick} className="px-3 py-3">
-              {!click ? (
+              {click ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-8 w-8"
@@ -78,7 +78,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className={`md:hidden lg:hidden  ${click && "hidden"}`}>
+      <div className={`md:hidden lg:hidden  ${!click && "hidden"}`}>
         <MobileMenu />
       </div>
     </nav>
