@@ -20,7 +20,7 @@ const NavBar = () => {
           <div className=" hidden md:flex space-x-5  ">
             <Link
               to="/"
-              className="py-2 px-2 no-underline text-slate-900  font-nexa text-20 
+              className="py-2 px-2 no-underline   font-nexa text-20 
                hover:bg-d-blue hover:text-d-ltBg text-d-Black focus:bg-d-blue focus:text-d-ltBg"
             >
               Home
@@ -30,7 +30,7 @@ const NavBar = () => {
             <NavBarDropDown items={items.resources} />
             <Link
               to="/about"
-              className="py-2 px-2 no-underline text-slate-900  font-nexa text-20 
+              className="py-2 px-2 no-underline  font-nexa text-20 
                hover:bg-d-blue hover:text-d-ltBg text-d-Black focus:bg-d-blue focus:text-d-ltBg"
             >
               Contact
