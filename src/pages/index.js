@@ -7,6 +7,7 @@ import WhatWeDo from "./welcome/whatWeDo"
 import WeSupportU from "./welcome/weSupportU"
 import MemberSays from "./welcome/memberSayings"
 import Subscribe from "./welcome/subscribeNL"
+import FQA from "./welcome/FQA"
 export default function Home() {
   return (
     <Layout>
@@ -17,6 +18,7 @@ export default function Home() {
       <WeSupportU />
       <MemberSays />
       <Subscribe />
+      <FQA />
     </Layout>
   )
 }
