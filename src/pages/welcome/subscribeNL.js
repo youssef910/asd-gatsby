@@ -14,7 +14,7 @@ const Subscribe = () => {
   }
   return (
     <div
-      className="grid relative md:grid-cols-2 bg-d-ltBg lg:mx-10 py-10 md:grid-rows-1
+      className="grid relative md:grid-cols-2 bg-d-beige lg:mx-10 py-10 md:grid-rows-1
      sm:grid-rows-2 xs:grid-col-1 gap-2 "
     >
       <div className="pl-2  grid justify-items-center  py-5 ">
@@ -24,12 +24,10 @@ const Subscribe = () => {
           our newsletter?
         </h1>
         <div class="max-w-md mx-auto rounded-lg overflow-hidden md:max-w-xl">
-          {/* <div class="md:flex"> */}
           <div class="relative ">
             {" "}
             <form onSubmit={handleSubmit}>
               <input
-                // onSubmit={handleSubmit}
                 required
                 type="email"
                 onChange={e => setEmail(e.target.value)}
@@ -38,10 +36,7 @@ const Subscribe = () => {
                 className="bg-white h-10 w-4/5 px-12  rounded-lg focus:outline-none hover:cursor-pointer"
                 name="email"
               />{" "}
-              <button
-                // onClick={handleSubmit}
-                className="absolute top-0 right-1   p-2 text-white  bg-slate-900"
-              >
+              <button className="absolute top-0 right-1   p-2 text-white  bg-slate-900">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
@@ -60,7 +55,6 @@ const Subscribe = () => {
             </form>
           </div>
         </div>
-        {/* </div>   */}
       </div>
 
       <div className=" pl-3   relative ">
