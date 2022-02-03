@@ -3,7 +3,7 @@ import React from "react"
 
 const WeSupportU = () => {
   return (
-    <div className="grid mx-10 md:grid-cols-2 bg-d-ltBg py-14 md:grid-rows-1 sm:grid-rows-2 xs:grid-col-1 gap-2 ">
+    <div className="grid mx-10 md:grid-cols-2 mx-10 bg-d-ltBg py-14 md:grid-rows-1 sm:grid-rows-2 xs:grid-col-1 gap-2 ">
       <div className="pl-2  grid justify-items-center ">
         {" "}
         <h1 className="font-roboto text-48	text-center"> We Support You?</h1>

@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 const WhatWeDo = () => {
   return (
-    <div className="grid md:grid-cols-2 bg-d-lBlue py-10 md:grid-rows-1 sm:grid-rows-2 xs:grid-col-1 gap-2 ">
+    <div className="grid md:grid-cols-2 bg-d-lBlue mx-10 py-10 md:grid-rows-1 sm:grid-rows-2 xs:grid-col-1 gap-2 ">
       <div className="pl-2  grid justify-items-center ">
         {" "}
         <h1 className="font-roboto text-48	text-center"> What We Do?</h1>
