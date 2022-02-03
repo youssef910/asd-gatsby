@@ -5,10 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import NavBar from "./NavBar/Navbar"
 function Layout({ children }) {
   return (
-    <div className="layout">
+    <div className="layout bg-black">
       <NavBar />
       <div className="content">{children}</div>
-      {/* <Button primary></Button> */}
       <Footer />
     </div>
   )
