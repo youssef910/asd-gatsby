@@ -10,8 +10,8 @@ const NavBar = () => {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
   return (
-    <nav className="bg-d-ltBg  ">
-      <div className="px-8 mx-auto border-y border-b-gray-500-800 ">
+    <nav className="bg-d-ltBg lg:mx-10 ">
+      <div className="px-8 mx-auto border-y  border-b-gray-500-800 ">
         <div className="flex justify-between items-center">
           <div>
             {" "}
