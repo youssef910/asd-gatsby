@@ -5,6 +5,7 @@ import ScrollDown from "./welcome/scrollDown"
 import AboutUs from "./welcome/aboutUs"
 import WhatWeDo from "./welcome/whatWeDo"
 import WeSupportU from "./welcome/weSupportU"
+import MemberSays from "./welcome/memberSayings"
 export default function Home() {
   return (
     <Layout>
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutUs />
       <WhatWeDo />
       <WeSupportU />
+      <MemberSays />
     </Layout>
   )
 }
