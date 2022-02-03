@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 const ScrollDown = () => {
   return (
-    <div className="grid grid-cols-1 mx-10 bg-d-ltBg justify-items-center">
+    <div className="grid grid-cols-1 lg:mx-10 bg-d-ltBg justify-items-center">
       {" "}
       <h1 className="text-center text-d-blue font-ambit_bold size-27">
         SCROLL DOWN

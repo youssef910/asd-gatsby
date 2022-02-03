@@ -4,7 +4,7 @@ import React from "react"
 const Welcome = () => {
   return (
     <div
-      className="grid md:grid-cols-2 bg-d-ltBg mx-10
+      className="grid md:grid-cols-2 bg-d-ltBg lg:mx-10
      md:grid-rows-1 sm:grid-rows-2 xs:grid-col-1 gap-2 "
     >
       <div className="pl-2  ">
