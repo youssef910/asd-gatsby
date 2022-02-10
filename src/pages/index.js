@@ -7,18 +7,18 @@ import WhatWeDo from "./welcome/whatWeDo"
 import WeSupportU from "./welcome/weSupportU"
 import MemberSays from "./welcome/memberSayings"
 import Subscribe from "./welcome/subscribeNL"
-import FQA from "./welcome/FQA"
+import FrequentAskedQuestions from "./welcome/FQA"
 export default function Home() {
   return (
     <Layout>
       <Welcome />
-      <ScrollDown />
-      <AboutUs />
+      <ScrollDown  />
+      <AboutUs id="aboutUs" />
       <WhatWeDo />
       <WeSupportU />
       <MemberSays />
       <Subscribe />
-      <FQA />
+      <FrequentAskedQuestions />
     </Layout>
   )
 }

@@ -1,13 +1,17 @@
-import { Link } from "gatsby"
 import React from "react"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 const WeSupportU = () => {
   return (
-    <div className="grid  md:grid-cols-2 lg:mx-10 bg-d-ltBg py-14 md:grid-rows-1 sm:grid-rows-2 xs:grid-col-1 gap-2 ">
-      <div className="pl-2  grid justify-items-center ">
+    <div
+      className=" grid grid-rows-2  bg-d-ltBg md:grid-cols-2 md:grid-rows-1 lg:mx-10 "
+      // className="xs:grid-col-1  grid gap-2 bg-d-ltBg py-14 sm:grid-rows-2 md:grid-cols-2 md:grid-rows-1 lg:mx-10 "
+    >
+      <div className="grid  justify-items-center pl-2 ">
         {" "}
-        <h1 className="font-roboto text-48	text-center"> We Support You?</h1>
-        <p className="font-nexa text-20 text-start">
+        <h1 className="text-center font-roboto	text-48"> We Support You?</h1>
+        <p className="text-start font-nexa text-20">
           If you are a parent of an autistic child
           <br /> (whether officially diagnosed, on the long
           <br /> winded journey or just having some
@@ -16,13 +20,13 @@ const WeSupportU = () => {
         <div>
           <Link to="/register">
             <button
-              className={` border-1 bg-d-Black text-center text-white
-              font-ambit_bold text-24 ml-6 px-4 py-2 my-5 w-fit group hover:bg-stone-600 focus:outline-none focus:ring focus:ring-d-Black-300 `}
+              className={` border-1 group focus:ring-d-Black-300 my-5
+              ml-6 w-fit bg-d-Black px-4 py-2 text-center font-ambit_bold text-24 text-white hover:bg-stone-600 focus:outline-none focus:ring `}
             >
               Join Us
               <div
-                className=" hidden  group-hover:block  hover:bg-d-lBlue  bg-d-Black text-white mt-3 
-                 px-1 absolute rounded shadow-xl text-sm"
+                className=" absolute  mt-3  hidden  rounded bg-d-Black px-1 
+                 text-sm text-white shadow-xl hover:bg-d-lBlue group-hover:block"
               >
                 Click Join Us
               </div>
@@ -30,13 +34,16 @@ const WeSupportU = () => {
           </Link>
         </div>
       </div>
-      <div className="pl-3   relative">
-        <img
-          src="/supporting-elderly-woman.jpg"
-          alt="Welcome image"
-          className=" z-10 absolute   h-5/6 w-4/6 max  bottom-12 right-16 rounded-xl  "
+      <div className="relative   pl-3">
+        <StaticImage
+          src="../../images/supporting-elderly-woman.jpg"
+          // className=" max absolute   bottom-12 left-20 z-10  h-4/6 w-4/5 rounded-xl  "
+          formats={["auto", "avif", "webp"]}
+          alt="Support"
+          className=" max absolute   bottom-12 right-16 z-10  h-5/6 w-4/6 rounded-xl  "
+          placeholder="blurred"
         />
-        <div className="bg-d-beige w-2/3 h-4/5 rounded-2xl absolute bottom-5 right-10 z-0   "></div>
+        <div className="absolute bottom-5 right-10 z-0 h-4/5 w-2/3 rounded-2xl bg-d-beige   "></div>
       </div>
     </div>
   )

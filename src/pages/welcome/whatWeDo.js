@@ -1,12 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 const WhatWeDo = () => {
   return (
-    <div className="grid md:grid-cols-2 bg-d-lBlue lg:mx-10 py-10 md:grid-rows-1 sm:grid-rows-2 xs:grid-col-1 gap-2 ">
-      <div className="pl-2  grid justify-items-center ">
+    <div
+      className=" grid grid-rows-2  bg-d-lBlue md:grid-cols-2 md:grid-rows-1 lg:mx-10 "
+    >
+      <div className="grid  justify-items-center pl-2 ">
         {" "}
-        <h1 className="font-roboto text-48	text-center"> What We Do?</h1>
-        <p className="font-nexa text-20 text-start">
+        <h1 className="text-center font-roboto	text-48"> What We Do?</h1>
+        <p className="text-start font-nexa text-20">
           We are provide advice, signposting, tips
           <br /> and products to help support parents of
           <br />
@@ -16,13 +19,13 @@ const WhatWeDo = () => {
         <div>
           <Link to="/whatWeDoPg">
             <button
-              className={` border-1 bg-d-Black text-center text-white
-              font-ambit_bold text-24 ml-6 px-4 py-2 my-5 w-fit group hover:bg-stone-600 focus:outline-none focus:ring focus:ring-d-Black-300 `}
+              className={` border-1 group focus:ring-d-Black-300 my-5
+              ml-6 w-fit bg-d-Black px-4 py-2 text-center font-ambit_bold text-24 text-white hover:bg-stone-600 focus:outline-none focus:ring `}
             >
               Read More
               <div
-                className=" hidden  group-hover:block  hover:bg-d-lBlue  bg-d-Black text-white mt-3 
-                 px-1 absolute rounded shadow-xl text-sm"
+                className=" absolute  mt-3  hidden  rounded bg-d-Black px-1 
+                 text-sm text-white shadow-xl hover:bg-d-lBlue group-hover:block"
               >
                 Click to Read More
               </div>
@@ -30,13 +33,15 @@ const WhatWeDo = () => {
           </Link>
         </div>
       </div>
-      <div className="pl-3   relative">
-        <img
-          src="/cute-girl-with-down-syndrome-in-mothers-arms.jpg"
-          alt="Welcome image"
-          className=" z-10 absolute   h-4/6 w-4/5 max  bottom-12 left-20 rounded-xl  "
+      <div className="relative   pl-3">
+        <StaticImage
+          className=" max absolute   bottom-12 left-20 z-10  h-4/6 w-4/5 rounded-xl  "
+          src="../../images/cute-girl-with-down-syndrome-in-mothers-arms.jpg"
+          formats={["auto", "avif", "webp"]}
+          alt="What we do"
+          placeholder="blurred"
         />
-        <div className="bg-d-beige w-2/3 h-4/5 rounded-2xl absolute bottom-5 left-10 z-0   "></div>
+        <div className="absolute bottom-5 left-10 z-0 h-4/5 w-2/3 rounded-2xl bg-d-beige   "></div>
       </div>
     </div>
   )

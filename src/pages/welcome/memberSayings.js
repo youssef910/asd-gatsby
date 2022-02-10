@@ -3,29 +3,32 @@ import { Link } from "gatsby"
 import { membersSays } from "../../../static/memberSays.js"
 const MemberSays = () => {
   return (
-    <div className="lg:mx-10 py-5 bg-d-blue">
-      <h2 className="text-center text-white font-roboto text-40">
+    <div className="bg-d-blue py-5 lg:mx-10">
+      <h2 className="text-center font-roboto text-40 text-white">
         What Our Beloved Members Say
       </h2>
-      <div className="grid md:grid-cols-3 sm:grid-cols-1 ">
-        {membersSays.map(x => (
-          <div className="bg-white align-middle grid justify-items-center md:p-5 sm:pl-3 m-4 ">
-            <h4 className="text-24 text-center font-ambit_bold">{x.head}</h4>
-            <p className="text-center  font-ambit_italic text-16">{x.p}</p>
+      <div className="grid sm:grid-cols-1 md:grid-cols-3 ">
+        {membersSays.map(say => (
+          <div
+            key={say.head}
+            className="m-4 grid justify-items-center bg-white align-middle sm:pl-3 md:p-5 "
+          >
+            <h4 className="text-center font-ambit_bold text-24">{say.head}</h4>
+            <p className="text-center  font-ambit_italic text-16">{say.p}</p>
           </div>
         ))}
       </div>
-      <div className="grid justify-items-center mt-4">
+      <div className="mt-4 grid justify-items-center">
         <Link to="/register">
           <button
-            className=" border-1 bg-d-Black  group w-full text-center text-white
-            font-ambit_bold text-24  px-4 py-2   hover:bg-slate-600 
-            focus:outline-none focus:ring focus:ring-d-Black-300 "
+            className=" border-1 group  focus:ring-d-Black-300 w-full bg-d-Black px-4
+            py-2 text-center  font-ambit_bold text-24   text-white 
+            hover:bg-slate-600 focus:outline-none focus:ring "
           >
             Click here to Register
             <div
-              className=" hidden  group-hover:block   hover:bg-d-lBlue  bg-d-Black text-white mt-3 
-                 px-1 absolute rounded shadow-xl text-sm ml-20"
+              className=" absolute  mt-3   ml-20  hidden rounded bg-d-Black 
+                 px-1 text-sm text-white shadow-xl hover:bg-d-lBlue group-hover:block"
             >
               Click to Register
             </div>

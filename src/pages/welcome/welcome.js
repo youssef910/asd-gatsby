@@ -1,22 +1,20 @@
 import { Link } from "gatsby"
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Welcome = () => {
   return (
-    <div
-      className="grid md:grid-cols-2 bg-d-ltBg lg:mx-10
-     md:grid-rows-1 sm:grid-rows-2 xs:grid-col-1 gap-2 "
-    >
+    <div className=" grid grid-rows-2  bg-d-ltBg md:grid-cols-2 md:grid-rows-1 lg:mx-10 ">
       <div className="pl-2  ">
         {" "}
-        <h1 className="font-roboto text-48	pl-4 py-5">
+        <h1 className="py-5 pl-4 font-roboto	text-48 ">
           Welcome to <br /> SENsation Life
         </h1>
         <ul className=" flex-col space-y-5">
           <li className="flex align-middle ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 bg-d-beige rounded-2xl"
+              className="h-6 w-6 rounded-2xl bg-d-beige"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -33,7 +31,7 @@ const Welcome = () => {
           <li className="flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 bg-d-beige rounded-2xl"
+              className="h-6 w-6 rounded-2xl bg-d-beige"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -53,14 +51,14 @@ const Welcome = () => {
         <div>
           <Link to="/register">
             <button
-              className=" border-1 bg-d-blue  group w-3/4 text-center text-white
-            font-ambit_bold text-24 ml-6 px-4 py-2  mr-5 my-5 hover:bg-blue-800 
-            focus:outline-none focus:ring focus:ring-d-Black-300 "
+              className=" border-1 group  focus:ring-d-Black-300 my-5 ml-6 mr-5
+            w-3/4 bg-d-blue px-4 py-0  text-center  font-ambit_bold text-24 text-white 
+            hover:bg-blue-800 focus:outline-none focus:ring "
             >
               Click here to Register
               <div
-                className=" hidden  group-hover:block   hover:bg-d-lBlue  bg-d-Black text-white mt-3 
-                 px-1 absolute rounded shadow-xl text-sm ml-20"
+                className=" absolute  mt-3   ml-20  hidden rounded bg-d-Black 
+                 px-1 text-sm text-white shadow-xl hover:bg-d-lBlue group-hover:block"
               >
                 Click to Register
               </div>
@@ -68,13 +66,15 @@ const Welcome = () => {
           </Link>
         </div>
       </div>
-      <div className="pl-3   relative">
-        <img
-          src="/autistic-little-girl-close-up.jpg"
-          alt="Welcome image"
-          className=" z-10 absolute   h-4/6 w-4/5 max  bottom-12 right-15 rounded-xl  "
+      <div className="relative   pl-3 ">
+        <StaticImage
+          className=" max right-15   absolute bottom-12 z-10  h-4/6 w-4/5 rounded-xl  "
+          src="../../images/autistic-little-girl-close-up.jpg"
+          formats={["auto", "avif", "webp"]}
+          alt="welcome-girl "
+          placeholder="blurred"
         />
-        <div className="bg-d-lBlue w-2/3 h-4/5 rounded-2xl absolute bottom-5 right-10 z-0   "></div>
+        <div className="absolute bottom-5 right-10 z-0 h-4/5 w-2/3 rounded-2xl bg-d-lBlue   "></div>
       </div>
     </div>
   )

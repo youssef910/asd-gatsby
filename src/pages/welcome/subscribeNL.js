@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import { StaticImage } from "gatsby-plugin-image"
 const Subscribe = () => {
   const [email, setEmail] = useState("")
   const [isOpen, setIsOpen] = useState(false)
@@ -14,16 +14,17 @@ const Subscribe = () => {
   }
   return (
     <div
-      className="grid relative md:grid-cols-2 bg-d-beige lg:mx-10 py-10 md:grid-rows-1
-     sm:grid-rows-2 xs:grid-col-1 gap-2 "
+    //   className= relative grid gap-2  py-10 sm:grid-rows-2
+    //  md:grid-cols-2 md:grid-rows-1 lg:mx-10 "
+      className="relative grid grid-rows-2  bg-d-beige md:grid-cols-2 md:grid-rows-1 lg:mx-10 "
     >
-      <div className="pl-2  grid justify-items-center  py-5 ">
-        <h1 className="font-roboto text-48 mb-5	text-start">
+      <div className="grid  justify-items-center py-5  pl-2 ">
+        <h1 className="text-start mb-5 font-roboto	text-48">
           {" "}
           Subscribe to <br />
           our newsletter?
         </h1>
-        <div class="max-w-md mx-auto rounded-lg overflow-hidden md:max-w-xl">
+        <div class="mx-auto max-w-md overflow-hidden rounded-lg md:max-w-xl">
           <div class="relative ">
             {" "}
             <form onSubmit={handleSubmit}>
@@ -33,10 +34,10 @@ const Subscribe = () => {
                 onChange={e => setEmail(e.target.value)}
                 value={email}
                 placeholder="enter your email "
-                className="bg-white h-10 w-4/5 px-12  rounded-lg focus:outline-none hover:cursor-pointer"
+                className="h-10 w-4/5 rounded-lg bg-white  px-12 hover:cursor-pointer focus:outline-none"
                 name="email"
               />{" "}
-              <button className="absolute top-0 right-1   p-2 text-white  bg-slate-900">
+              <button className="absolute top-0 right-1   bg-slate-900 p-2  text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
@@ -57,23 +58,25 @@ const Subscribe = () => {
         </div>
       </div>
 
-      <div className=" pl-3   relative ">
-        <img
-          src="/woman-using-a-mobile-phone.jpg"
-          alt="subscribe image"
-          className=" z-10 absolute   h-5/6 w-4/6 max  bottom-12 right-16 rounded-xl  "
+      <div className=" relative   pl-3 ">
+        <StaticImage
+          src="../../images/woman-using-a-mobile-phone.jpg"
+          formats={["auto", "avif", "webp"]}
+          alt="subscribe "
+          placeholder="blurred"
+          className=" max absolute   bottom-12 right-16 z-10  h-5/6 w-4/6 rounded-xl  "
         />
-        <div className="bg-d-lBlue w-2/3 h-4/5 rounded-2xl absolute bottom-5 right-10 z-0   "></div>
+        <div className="absolute bottom-5 right-10 z-0 h-4/5 w-2/3 rounded-2xl bg-d-lBlue   "></div>
       </div>
       {isOpen ? (
-        <div className=" absolute inset-0   bg-stone-700 bg-opacity-25 z-10 ">
-          <div className="bg-white max-w-md py-2 px-3 absolute  rounded lg:top-1/3 lg:left-1/4   z-10  text-gray-800">
-            <div className="flex justify-between items-center">
-              <h4 className="text-lg font-bold text-center">Thank you!!</h4>
+        <div className=" absolute inset-0   z-10 bg-stone-700 bg-opacity-25 ">
+          <div className="absolute z-10 max-w-md rounded bg-white  py-2 px-3 text-gray-800   lg:top-1/3  lg:left-1/4">
+            <div className="flex items-center justify-between">
+              <h4 className="text-center text-lg font-bold">Thank you!!</h4>
 
               <button onClick={closeModal}>
                 <svg
-                  className="h-6 w-6 cursor-pointer p-1 hover:bg-gray-300 rounded-full"
+                  className="h-6 w-6 cursor-pointer rounded-full p-1 hover:bg-gray-300"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -98,7 +101,7 @@ const Subscribe = () => {
             <div className="mt-3 flex justify-end space-x-3">
               <button
                 onClick={closeModal}
-                className="px-3 py-1 rounded hover:bg-green-700 hover:bg-opacity-50 bg-green-500"
+                className="rounded bg-green-500 px-3 py-1 hover:bg-green-700 hover:bg-opacity-50"
               >
                 Ok
               </button>
