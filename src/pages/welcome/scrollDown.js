@@ -2,12 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 const ScrollDown = () => {
   return (
-    <div className="grid grid-cols-1 lg:mx-10 bg-d-ltBg justify-items-center">
+    <div className="grid grid-cols-1 justify-items-center bg-d-ltBg lg:mx-10">
       {" "}
-      <h1 className="text-center text-d-blue font-ambit_bold size-27">
+      <h1 className="size-27 text-center font-ambit_bold text-d-blue">
         SCROLL DOWN
       </h1>
-      <Link to="/">
+      <Link>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-10 w-10 text-d-blue hover:text-d-lBlue"

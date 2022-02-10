@@ -5,23 +5,30 @@ import LoginButton from "./LoginBtn"
 import NavBarDropDown from "./NavBarDropDown"
 import SearchBtn from "./SearchBtn"
 import MobileMenu from "./MobileMenu"
+import { StaticImage } from "gatsby-plugin-image"
 
 const NavBar = () => {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
   return (
-    <nav className="bg-d-ltBg lg:mx-10 ">
-      <div className="px-8 mx-auto border-y  border-b-gray-500-800 ">
-        <div className="flex justify-between items-center">
-          <div>
-            {" "}
-            <img src="/Logo.jpeg" className="img  max-h-10" alt="logo" />
-          </div>
-          <div className=" hidden md:flex space-x-5  ">
+    <nav className="max-h-8 bg-d-ltBg lg:mx-10 ">
+      <div className="border-b-gray-500-800 mx-auto border-y  px-8 ">
+        <div className="flex items-center justify-between">
+          {" "}
+          <StaticImage
+            src="../../images/Logo.jpeg"
+            width={200}
+            height={50}
+            formats={["auto", "avif", "webp"]}
+            alt="SensationalLife-Logo "
+            placeholder="blurred"
+          />
+          {/* <img src="/Logo.jpeg" className="img  max-h-10" alt="logo" /> */}
+          <div className=" hidden space-x-5 md:flex  ">
             <Link
               to="/"
-              className="py-2 px-2 no-underline   font-nexa text-20 
-               hover:bg-d-blue hover:text-d-ltBg text-d-Black focus:bg-d-blue focus:text-d-ltBg"
+              className="py-2 px-2 font-nexa   text-20 text-d-Black 
+               no-underline hover:bg-d-blue hover:text-d-ltBg focus:bg-d-blue focus:text-d-ltBg"
             >
               Home
             </Link>
@@ -30,17 +37,17 @@ const NavBar = () => {
             <NavBarDropDown items={items.resources} />
             <Link
               to="/about"
-              className="py-2 px-2 no-underline  font-nexa text-20 
-               hover:bg-d-blue hover:text-d-ltBg text-d-Black focus:bg-d-blue focus:text-d-ltBg"
+              className="py-2 px-2 font-nexa  text-20 text-d-Black 
+               no-underline hover:bg-d-blue hover:text-d-ltBg focus:bg-d-blue focus:text-d-ltBg"
             >
               Contact
             </Link>
           </div>
-          <div className=" hidden md:flex space-x-5">
+          <div className=" hidden space-x-5 md:flex">
             <SearchBtn />
             <LoginButton />
           </div>
-          <div className="md:hidden flex items-center">
+          <div className="flex items-center md:hidden">
             <button onClick={handleClick} className="px-3 py-3">
               {click ? (
                 <svg

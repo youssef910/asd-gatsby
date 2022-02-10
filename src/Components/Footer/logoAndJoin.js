@@ -1,26 +1,34 @@
 import React from "react"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 const LogoAndJoin = () => {
   return (
-    <div className="py-3 px-5 flex  md:flex-row flex-col  space-y-2 justify-between items-center  border-b-2 border-gray-400">
+    <div className="flex flex-col items-center  justify-between space-y-2  border-b-2 border-gray-400 py-3  px-5 md:flex-row">
       <div className="">
         {" "}
-        <img src="/Logo.jpeg" className=" md:shrink-0 max-h-12" alt="logo" />
+        <StaticImage
+          src="../../images/Logo.jpeg"
+          width={200}
+          height={50}
+          formats={["auto", "avif", "webp"]}
+          alt="SensationalLife-Logo "
+          placeholder="blurred"
+        />
       </div>
       <div className="flex flex-row items-center">
-        <h5 className="md:text-22 font-ambit_bold text-sm ">
+        <h5 className="font-ambit_bold text-sm md:text-22 ">
           Do want to be part of us?
         </h5>
         <Link to="/about">
           <button
-            className={` border-1 bg-d-ltBg text-center text-d-Black 
-          font-ambit_bold md:text-24 text-sm ml-6 md:px-4 md:py-1 p-1 w-fit 
-          group hover:bg-stone-600 hover:text-d-ltBg focus:outline-none focus:ring focus:ring-d-Black-300 `}
+            className={` border-1 group focus:ring-d-Black-300 ml-6 
+          w-fit bg-d-ltBg p-1 text-center font-ambit_bold text-sm text-d-Black hover:bg-stone-600 
+          hover:text-d-ltBg focus:outline-none focus:ring md:px-4 md:py-1 md:text-24 `}
           >
             Read More
             <div
-              className=" hidden  group-hover:block  hover:bg-d-lBlue  bg-d-ltBg text-white mt-3 
-            px-1 absolute rounded shadow-xl text-sm"
+              className=" absolute  mt-3  hidden  rounded bg-d-ltBg px-1 
+            text-sm text-white shadow-xl hover:bg-d-lBlue group-hover:block"
             >
               Click to Read More
             </div>
